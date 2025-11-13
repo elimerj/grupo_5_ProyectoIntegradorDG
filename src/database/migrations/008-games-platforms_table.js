@@ -6,28 +6,28 @@ module.exports = {
       id: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
       },
       id_game: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         references: {
-          model: 'Games',
-          key: 'id'
-        }
+          model: 'games',
+          key: 'id',
+        },
       },
       id_platform: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         references: {
-          model: 'Platforms',
-          key: 'id'
-        }
+          model: 'platforms',
+          key: 'id',
+        },
       },
       createdAt: Sequelize.DataTypes.DATE,
-      updatedAt: Sequelize.DataTypes.DATE
-    })
+      updatedAt: Sequelize.DataTypes.DATE,
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('games_platforms')
-  }
+    return queryInterface.dropTable('games_platforms');
+  },
 };

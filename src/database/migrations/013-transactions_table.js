@@ -6,39 +6,39 @@ module.exports = {
       id: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
       },
       id_user: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         allowNull: false,
         references: {
-          model: 'Users',
-          key: 'id'
-        }
+          model: 'users',
+          key: 'id',
+        },
       },
       total_cost: {
         type: Sequelize.DataTypes.INTEGER(100),
-        allowNull: false
+        allowNull: false,
       },
       status: {
         type: Sequelize.DataTypes.STRING(10),
-        allowNull: false
+        allowNull: false,
       },
       delivery: {
         type: Sequelize.DataTypes.TEXT,
         allowNull: false,
-        defaultValue: 'Online'
+        defaultValue: 'Online',
       },
       payment: {
         type: Sequelize.DataTypes.STRING(50),
-        allowNull: false
+        allowNull: false,
       },
       createdAt: Sequelize.DataTypes.DATE,
-      updatedAt: Sequelize.DataTypes.DATE
+      updatedAt: Sequelize.DataTypes.DATE,
     });
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('transactions')
-  }
+    return queryInterface.dropTable('transactions');
+  },
 };

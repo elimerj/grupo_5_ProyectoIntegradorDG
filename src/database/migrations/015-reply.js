@@ -6,34 +6,34 @@ module.exports = {
       id: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
       },
       id_question: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         allowNull: false,
         references: {
-          model: 'Questions',
-          key: 'id'
-        }
+          model: 'questions',
+          key: 'id',
+        },
       },
       id_user: {
         type: Sequelize.DataTypes.INTEGER(100).UNSIGNED,
         allowNull: false,
         references: {
-          model: 'Users',
-          key: 'id'
-        }
+          model: 'users',
+          key: 'id',
+        },
       },
       message: {
         type: Sequelize.DataTypes.TEXT,
-        allowNull: false
+        allowNull: false,
       },
       createdAt: Sequelize.DataTypes.DATE,
-      updatedAt: Sequelize.DataTypes.DATE
-    })
+      updatedAt: Sequelize.DataTypes.DATE,
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
     return queryInterface.dropTable('replys');
-  }
+  },
 };
