@@ -2,9 +2,11 @@
 
 # House of Games
 
-[👉 Ver el sitio en vivo](https://house-of-games-qsqb.onrender.com)
 
 ![House of Games(LOGO)](https://user-images.githubusercontent.com/62583730/84852852-3e67cf00-b034-11ea-9632-cc00557a42c5.png)
+
+[👉 Ver el sitio en vivo](https://house-of-games-7jqd.onrender.com/)
+
 
 ## ¿Qué productos o servicios brindará nuestro sitio?
 
