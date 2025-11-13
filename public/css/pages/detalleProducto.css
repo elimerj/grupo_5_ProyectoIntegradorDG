@@ -1,0 +1,375 @@
+div .compra {
+    height: 9rem;
+}
+
+.detalle-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalle-container__mediaInfo{
+    position: relative;
+    display: flex;
+    margin-bottom: 10rem;
+    background-image: var(--secodary-bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 3px #010212;
+    width: 111rem;
+}
+
+.detalle-container__part-1{
+    position: relative;
+    margin-right: 2rem;
+}
+
+.detalle-container__part-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.detalle-container__part-2 p{
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.detalle-container__part-2 h3{
+    margin-bottom: 2rem;
+}
+
+.detalle-container__rating{
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.botones-administrador{
+    margin-bottom: auto;
+    justify-content: flex-end;
+}
+
+.detalle-container__plataform-buyButtons{
+    display: flex;
+}
+
+.detalle-container__plataform-buyButtons i{
+    font-size: 2rem;
+}
+
+.detalle-container__plataform-buttons{
+    margin-right: auto;
+}
+
+.botones-administrador{
+    display: flex;
+}
+
+.detalle-container__contenedor-slider {
+    background-color: black;
+    padding-left:2.5%;
+    padding-right:2.5%;
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    position: relative;
+    width: 800px;
+}
+
+.detalle-container__data-description{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10rem;
+}
+
+.span-detail {
+    color: grey;
+    margin-right: 11rem;
+}
+
+.detalle-container__full-info{
+    width: 85rem;
+}
+
+.detalle-container__devInfo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 7rem;
+}
+
+.detalle-container__more-games{
+    display: flex;
+}
+
+.otros-juegos {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.otros-juegos a article p {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.otros-juegos a article div{
+    margin-bottom: 1rem;
+}
+
+.otros-juegos a {
+    text-decoration: none;
+}
+
+.juegos-container__redirection--modifer{
+    margin-left: 4rem;
+    margin-right: 0 !important;
+}
+/*
+text-decoration: none;
+    color: #ffff;
+    font-size: 1.5rem;
+    margin: 0;
+    */
+
+.otros-juegos a article div img {
+    width: 20rem;
+    height: 30rem;
+}
+.otros-juegos a article div img:hover{
+    box-shadow: 0 1px 6px 5px #000;
+    transition: all .2s;
+}
+
+.otros-juegos a {
+    color: white;
+}
+
+.flecha-derecha,
+.flecha-izquierda {
+    padding: 0 auto;
+    position: absolute;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    height: 50%;
+    top: calc(50%-25%);
+    line-height: 40px;
+    width: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+    z-index: 100;
+    transition: .2s ease all;
+}
+
+.flecha-derecha {
+    left: 0;
+   
+}
+
+.flecha-izquierda {
+    right: 0;
+}
+
+.detalle-container__mediaInfo .flecha-derecha:hover,
+.detalle-container__mediaInfo .flecha-izquierda:hover {
+    font-size: 35px;
+}
+
+.indicadores button {
+    align-items: center;
+    display: flex;
+    height: 3px;
+    width: 10px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    margin-left: 2PX;
+}
+
+.contenedor-carrusel {
+    background-color: var(--secodary-bg-color);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.contenedor-carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 800px;
+}
+
+.contenedor-carrusel .imagen-gameplay {
+    position: relative;
+    z-index: 50;
+    
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+
+}
+
+.contenedor-carrusel .imagen-gameplay:hover {
+    z-index: 1000;
+    cursor: pointer;
+    transform: scale(1.2);
+    transform-origin: center;
+
+}
+.contenedor-carrusel .imagen-gameplay iframe{
+    width: 100%;
+    vertical-align: top;
+    height: 8.4rem;
+}
+.contenedor-carrusel .imagen-gameplay img {
+    width: 100%;
+    vertical-align: top;
+    height: 8.4rem;
+}
+
+.compra i {
+    color: white;
+}
+
+section .detalle-juego {
+    justify-content: space-between;
+}
+
+i.rating {
+    color: goldenrod;
+}
+
+
+.h1-detalle {
+    margin-bottom: .8rem;
+}
+div.texto-container{
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+div.texto-container div.texto-informativo{
+    color: grey;
+    word-break: break-word;
+}
+
+.shoping-cart-detalle{
+    margin-right: 2rem;
+}
+
+.icono-xbox{
+    margin-right: 1rem;
+}
+
+.icono-playstation{
+    margin-right: 1rem;
+}
+
+.padding-cont-detalle{
+    padding-top: 6rem;
+    font-size: 1.8rem;
+}
+
+div.especificaciones{
+    padding-top: 3rem;
+}
+
+.carrito-contenedor-link,
+.carrito-contenedor-link:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.imagen-detalle{
+    height: 17rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+button.detail--action-button {
+    position: relative;
+    display: block;
+    font-size: 1.2rem;
+    background-color: #2568AC;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1.5rem;
+    padding: 1rem ;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease-in;
+    transition: .4s;
+  }
+
+  button.detail--action-button a {
+      color: white;
+      text-decoration: none;
+  }
+  
+  button.detail--action-button:before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    transition: .2s ease-in;
+  
+  }
+  
+  button.detail--action-button:hover:before {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .vista {
+    width: 80rem;
+    height: 45rem;
+
+  }
+  .vista img, .vista iframe{
+      margin: 0;
+      width: 100%;
+      height: 100%  ;
+  }
+  
+  @keyframes fadeIn{
+      to{
+          opacity: 1;
+      }
+  }
+  .fade-in{
+      opacity:0;
+      animation: fadeIn 0.5s ease-in 1 forwards;
+  }
+ .oculto{
+     display: none;
+     opacity:0;
+     animation: fadeIn 0.5s ease-in 1 forwards;
+ }
+
+ .bordeado{
+    opacity: 1;
+ }
+
+ .logo {
+    left:35%;
+    top: 25%;
+    max-width: 40px;
+    max-height: 40px;
+    position: absolute;
+ }
+
+ .generos-button button{
+     margin: 0;
+     padding: 0.6rem;
+     display: inline;
+ }

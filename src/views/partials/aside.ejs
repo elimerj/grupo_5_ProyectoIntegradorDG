@@ -1,0 +1,20 @@
+<div class="container-container__aside-cont">
+    <aside class="juegos-container__aside">
+        <ul class="juegos-container__list">
+            <li class="juegos-container__item juegos-container__item--genres">Géneros <i class="fas fa-angle-right"></i>
+                <ul class="juegos-container__sub-list juegos-container__sub-list--genres" type="none">
+                    <%locals.localAside.genres.forEach((element)=>{ %>
+                        <li><a href="/product/genres/<%=element.id%>"><%=element.name%></a></li>
+                    <% }) %> 
+                </ul>
+            </li>
+            <li class="juegos-container__item juegos-container__item--platforms">Plataformas <i class="fas fa-angle-right"></i>
+                <ul class="juegos-container__sub-list juegos-container__sub-list--platforms" type="none">
+                    <% locals.localAside.platforms.forEach((element)=>{ %>
+                        <li><%=element.name%></li>
+                    <% }) %> 
+                </ul>
+            </li>
+        </ul>
+    </aside>
+</div>

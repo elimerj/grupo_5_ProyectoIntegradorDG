@@ -1,0 +1,48 @@
+/* Base CSS */
+
+@import url('./base.css');
+
+/* Pages */
+
+@import url('./pages/home.css');
+@import url('./pages/detalleProducto.css');
+@import url('./pages/registro.css');
+@import url('./pages/registerEdit.css');
+@import url('./pages/carritoDeCompras.css');
+@import url('./pages/cargaProductos.css');
+@import url('./pages/login.css');
+@import url('./pages/userProfile.css');
+@import url('./pages/graciasPorComprar.css');
+@import url('./pages/productEdit.css');
+@import url('./pages/productsGenres.css');
+@import url('./pages/buyFormChoose.css');
+@import url('./pages/buyFormDelivery.css');
+@import url('./pages/buyFormLocal.css');
+@import url('./pages/community.css');
+@import url('./pages/error.css');
+@import url('./pages/paymentMethodForm.css');
+
+/* Partials */
+
+@import url('./partials/responsive.css');
+@import url('./partials/variables.css');
+@import url('./partials/header.css');
+@import url('./partials/footer.css');
+@import url('./partials/slider.css');
+
+/* Media queries */
+
+@import url('./media-querys/userRegisterResponsive.css');
+@import url('./media-querys/userLoginResponsive.css');
+@import url('./media-querys/userProfileResponsive.css');
+@import url('./media-querys/productEditResponsive.css');
+@import url('./media-querys/productLoadResponsive.css');
+@import url('./media-querys/headerResponsive.css');
+@import url('./media-querys/homeResponsive.css');
+@import url('./media-querys/footerResponsive.css');
+@import url('./media-querys/userEditResponsive.css');
+@import url('./media-querys/communityResponsive.css');
+@import url('./media-querys/userCartResponsive.css');
+@import url('./media-querys/productDetailResponsive.css');
+@import url('./media-querys/buyFormResponsive.css');
+@import url('./media-querys/cartResponsive.css');

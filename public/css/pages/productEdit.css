@@ -1,0 +1,453 @@
+.container-productEdit {
+    font-size: 18px;
+    margin: 6rem auto;
+}
+
+form.productEdit-form {
+    padding: 7rem 0;
+}
+
+div.productEdit-form-1 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+div.productEdit-form-2 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+div.productEdit-form-3 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+div.productEdit-form-4 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+div.productEdit-form-5 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+}
+
+form.productEdit-form h1 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-left: 1rem;
+    font-size: 42px;
+}
+
+label.productEdit-form-label {
+    display: block;
+    font-size: 1.6em;
+    margin-left: 1rem;
+    width: 90%;
+}
+
+label.productEdit-form-label-img {
+    display: block;
+    font-size: 1.6em;
+    margin-left: 1rem;
+    width: 90%;
+
+}
+  
+input.productEdit-form-checkbox {
+    display: inline-block;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1rem;
+}
+
+label.productEdit-checkbox-label {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+small.text-danger {
+    font-size: 20px;
+    margin-left: 2rem;
+}
+
+small.text-danger-video {
+    font-size: 20px;
+    margin-left: 8rem;
+    color: crimson;
+}
+
+button.productEdit-form-button--submit {
+    background-color: white;
+    font-size: 1.6em;
+    color: white;
+    border-radius: var(--button-border-radius);
+    background-color: #00A6FF;
+    border: none;
+    padding: 1rem 5rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+button.productEdit-form-button--next {
+    position: relative;
+    background-color: white;
+    font-size: 1.6em;
+    background-color: #2568AC;
+    color: white;
+    border-radius: var(--button-border-radius);
+    border: none;
+    padding: 1rem 5rem;
+    margin: auto;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease-in;
+    transition: .4s;
+}
+
+button.productEdit-form-button--next a {
+    text-decoration: none;
+    color: white;
+}
+  
+button.productEdit-form-button--next:before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    transition: .2s ease-in;
+  }
+  
+button.productEdit-form-button--next:hover:before {
+    height: 100%;
+}
+
+input.productEdit-form-input {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    padding: 2rem;
+    color: white;
+    width: 90%;
+    height: 35%;
+    font-size: 20px;
+}
+
+textarea.productEdit-form-input__textarea {
+    display: block;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    color: rgb(199, 199, 199);
+    padding-left: 1rem;
+    width: 90%;
+    font-size: 20px;
+}
+
+textarea.productEdit-form-input__bigTextarea {
+    display: block;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    color: rgb(199, 199, 199);
+    width: 95%;
+    font-size: 20px;
+    padding-left: 1rem;
+}
+
+select.productEdit-form-input {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    padding: 0 15px;
+    border: solid 1.5px white;
+    color: white;
+    width: 90%;
+    height: 35%;
+}
+
+input.productEdit-form-input-imgInput {
+    display: block;
+    padding: 1rem 1.5rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    background-color: #314981;
+    border: solid 1.5px white;
+    color: white;
+    width: 90%;
+    height: 35%;
+}
+
+div.form2-containerEdit-all {
+    margin-left: 3rem;
+}
+
+div.form2-containerEdit {
+    margin: 0 5rem;
+}
+
+div.form2-containerEdit--portray {
+    margin: 1rem 0;
+    height: 100%;
+}
+
+div.form2-containerEdit--video {
+    margin: 1rem;
+}
+
+div.form2-containerEdit {
+    margin-top: 2rem;
+}
+
+div.form2-containerEdit--photo__left {
+    margin: 1rem 0;
+    margin-left: -4rem;
+}
+
+div.form2-containerEdit--photo__right {
+    margin: 1rem 0;
+    margin-left: -5rem;
+}
+
+img.productEdit-form-uploadImage--portray {
+    border-radius: 5px;
+    margin-left: -4rem;
+    box-shadow: 0 0 5px 2px #010212;
+    cursor: pointer;
+    width: 40rem;
+    height: 100%;
+}
+
+iframe.productEdit-form-uploadVideo {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    width: 100%;
+    height: 37rem;
+    margin-left: 9rem;
+    cursor: pointer;
+}
+
+input.productEdit-form-uploadImage--video-input {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    top: 10rem;
+}
+
+img.productEdit-form-uploadImage--carousel {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    margin: 1rem 0;
+    width: 11rem;
+    height: 7rem;
+    cursor: pointer;
+}
+
+img.productEdit-form-uploadImage--detail {
+    right: 5.7rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    width: 30rem;
+    height: 17rem;
+    cursor: pointer;
+}
+
+img.productEdit-form-uploadImage--horizontal {
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    margin-top: 1rem;
+    width: 100%;
+    height: 20rem;
+    cursor: pointer;
+}
+
+div.inactive_portray {
+    display: none;
+    position: absolute;
+}
+
+div.active_portray {
+    display: block;
+    position: absolute;
+    bottom: -30rem;
+    margin: 80%;
+    z-index: 10;
+    height: 500px;
+    transform: scale(1.5);
+}
+
+div.active_portray button {
+    position: absolute;
+    bottom: .5rem;      
+    left: 9rem;
+    font-size: 18px;
+    padding: .5rem 2rem;
+}
+
+div.active_portray i {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: black;
+    cursor: pointer;
+}
+
+div.inactive_horizontal {
+    display: none;
+    position: absolute;
+}
+
+div.active_horizontal {
+    display: block;
+    position: absolute;
+    left: -11rem;
+    top: 25rem;
+    width: 500px;
+    z-index: 10;
+    transform: scale(1.4);
+}
+
+div.active_horizontal button {
+    position: absolute;
+    bottom: .5rem;
+    left: 18rem;
+    font-size: 20px;
+    padding: .5rem 1.5rem;
+}
+
+div.active_horizontal i {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+div.inactive_detail {
+    display: none;
+    position: absolute;
+}
+
+div.active_detail {
+    display: block;
+    position: absolute;
+    width: 375px;
+    left: -36rem;
+    top: -35rem;
+    z-index: 10;
+    transform: scale(1.9);
+}
+
+div.active_detail button {
+    position: absolute;
+    font-size: 14px;
+    padding: .3rem 1.5rem;
+    left: 13rem;
+    bottom: .5rem;
+}
+
+div.active_detail i {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    right: 1rem;
+    top: 1rem;
+}
+div.active_detail img{
+    
+    width: 100%;
+}
+
+
+.boton-imagen{
+    display: none;
+}
+
+.productEdit-form-input--link-video{
+    width: 88% !important;
+}
+
+.form2-containerEdit--link-video{
+    margin-left: 7rem;
+    margin-right: -8rem;
+    margin-bottom: 2rem;
+}
+
+div.inactive_carousel{
+    display: none;
+    position: absolute;
+}
+
+div.active_carousel {
+    width: 40rem;
+    display: block;
+    position: absolute;
+    left: 70rem;
+    top: 140rem;
+    z-index: 10;
+    transform: scale(1.9);
+}
+div.active_carousel img{
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    width: 100%;
+}
+
+div.active_carousel button {
+    position: absolute;
+    bottom: 1rem;
+    left: 14rem;
+    font-size: 14px;
+    padding: .3rem 1.5rem;
+}
+
+div.active_carousel i {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: black;
+    cursor: pointer;
+}
+div .carouselcontenedor{
+    display: inline;
+}
+
+i.fa-times{
+    border: double 5px;
+    background-color: rgb(212, 212, 212);
+}
+.form2-containerEdit--horizontal{
+    margin-right:-1rem;
+    margin-left: 7rem;
+}

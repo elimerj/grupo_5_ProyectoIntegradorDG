@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'Lista de productos'}) %>
+
+<body>
+
+    <%- include('partials/header') %>
+    
+    <div class="container juegos-container mt-5">
+        <div class="container-container__aside-cont">
+            <aside class="juegos-container__aside">
+                <ul class="juegos-container__list">
+                    <li class="juegos-container__item juegos-container__item--genres">Géneros <i class="fas fa-angle-right"></i>
+                        <ul class="juegos-container__sub-list juegos-container__sub-list--genres" type="none">
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                        </ul>
+                    </li>
+                    <li class="juegos-container__item juegos-container__item--platforms">Plataformas <i class="fas fa-angle-right"></i>
+                        <ul class="juegos-container__sub-list juegos-container__sub-list--platforms" type="none">
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                        </ul>
+                    </li>
+                    <li class="juegos-container__item juegos-container__item--categories">Categorias <i class="fas fa-angle-right"></i>
+                        <ul class="juegos-container__sub-list juegos-container__sub-list--categories" type="none">
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+      <% if((typeof buscado && typeof consulta) != 'undefined'){ %>
+      <section class="juegos-container__all-products">
+        <h2 class="juegos-container__title">Resultados a tu busqueda</h2>
+          <div class="juegos-container__products-container ">
+            <% if(!buscado) { %>
+                <h2>No encontramos coincidencias con tu busqueda</h2>
+            <% } else { %>
+                <% for(let i = 0; i < buscado.length; i++) { %>
+                    <article class="juegos-container__redirection">
+                        <article class="juegos-container__product">
+                                <div class="juegos-container__animation">
+                                    <div class="card__side juegos-container__img-cont">
+                                        <% for(let k = 0; k < buscado[i].images.length; k++) { %>
+                                            <%  if( buscado[i].images[k].location == "default" ){ %>
+                                            <img class="juegos-container__img" src="../../img/uploads/productsImage/<%= buscado[i].images[k].img_url%>" alt="">
+                                            <% } %>
+                                        <% } %>
+                                    </div>
+                                    <div class="card__side juegos-container__back-part"
+                                    
+                                    <% for(let k = 0; k < buscado[i].images.length; k++) { %>
+                                        <%  if( buscado[i].images[k].location == "default" ){ %>
+                                            style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../img/uploads/productsImage/<%= buscado[i].images[k].img_url%>');
+                                                   background-size: cover;
+                                                   background-position: center center;
+                                                  "
+                                        <% } %>
+                                    <% } %>
+
+                                    >
+                                        <div class="juegos-container__back-part--part1">
+                                            <p class="juegos-container__back-part--part1-p"><%= buscado[i].description %></p>
+                                            <a class="juegos-container__back-part--part1-a" href="/product/detail/<%= buscado[i].id %>">ver mas</a>
+                                        </div>
+                                        <form  class="" action="/user/cart/<%= buscado[i].id %>?_method=post" method="POST">
+                                            <button class="juegos-container__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                        </form>
+                                        <a class="juegos-container__buy-button" href="/user/buyFormChoose">BUY</a>
+                                    </div>
+                                </div>
+                            <p class="juegos-container__product-name"><%= buscado[i].title %><br><%= buscado[i].price %>$</p>
+                        </article>
+                    </article>
+                <% } %>
+            <% } %>
+          </div>
+      </section>
+      <% } %>
+  </div>
+
+     <!-- Footer -->
+     <%- include('partials/footer') %>
+     <!-- Scripts -->
+     <%- include('partials/scripts') %>
+</body>
+</html>

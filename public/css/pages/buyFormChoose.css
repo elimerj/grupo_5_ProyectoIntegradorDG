@@ -1,0 +1,42 @@
+.conteainer-buyFormChoose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45rem;
+}
+
+.box-buyFormChoose__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 375px;
+    background-color: #2D4681;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px #010212;
+}
+
+.box-buyFormChoose__op1--modifer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.box-buyFormChoose__op{
+
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none !important;
+    color: #ffff;
+    background-color: rgb(190, 41, 41);
+    font-size: 1.7rem;
+}
+
+.box-buyFormChoose__op:hover{
+    color: #ffff !important;
+}
+
+.inactived-form-contenedor{
+    display: none;
+}

@@ -1,0 +1,185 @@
+.user-cart-header-container {
+    display: none;
+}
+
+.carrito-container{
+    display: flex;
+    height: auto;
+    font-size: 1.8rem;
+}
+
+.carrito-container .carrito-container__aside{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    background-image: linear-gradient(to bottom, #223052, #191E29);
+}
+
+.carrito-container .carrito-container__aside .carrito-container__list{
+    margin-bottom: auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.carrito-container__info {
+    margin: 0 auto;
+    min-width: 525px;
+}
+
+.carrito-container .carrito-container__aside .carrito-container__list .carrito-container__item a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.carrito-container .carrito-container__aside .carrito-container__list .carrito-container__item--logo{
+    margin-left: -2rem;
+}
+
+.carrito-container .carrito-container__aside .carrito-container__list .carrito-container__item a img{
+    width: 18rem;
+}
+
+.carrito-container__info {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-image: linear-gradient(to bottom, #223052, #191E29);
+    padding: 2rem;
+    height: 75rem;
+    overflow-y: scroll;
+}
+
+.carrito-container__info::-webkit-scrollbar {
+    width: 10px;
+  }
+
+/* Track */
+.carrito-container__info::-webkit-scrollbar-track {
+    background: #1f3058;
+  }
+  
+  /* Handle */
+.carrito-container__info::-webkit-scrollbar-thumb {
+    background: #fe0034;
+  }
+
+.carrito-container__info .carrito-container__info-cliente{
+    display: flex;
+    align-items: center;
+}
+
+.carrito-container__info .carrito-container__info-cliente .carrito-container__nombre{
+    color: grey;
+    font-weight: bold;
+}
+
+.carrito-container__info .carrito-container__info-cliente p{
+    font-size: 1.2rem;
+}
+
+.carrito-container__info .carrito-container__info-cliente a{
+    margin-left: auto;
+    font-size: 1.4rem;
+}
+
+.carrito-container__info .carrito-container__info-cliente--x div{
+    display: flex;
+    align-items: center;
+}
+
+.carrito-container__info .carrito-container__info-cliente--x div img{
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carrito-container__info .carrito-container__dato{
+    background-color: #2568AC;
+    margin-bottom: 2rem;
+    padding: .8rem;
+    padding-left: 2rem;
+}
+
+.carrito-container__info .carrito-container__dato--margin{
+    margin-bottom: 3.5rem;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego{
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.carrito-container__juego p {
+    width: 200px;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego:last-child{
+    margin-bottom: 0;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego .carrito-container__img-cont img{
+    width: 15rem;
+    margin-right: 2rem;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego .carrito-container__select-cont{
+    display: flex;
+    margin-left: 6rem;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego .carrito-container__select-cont .carrito-container__btn{
+    border: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.carrito-container .carrito-container__info .carrito-container__articulos .carrito-container__juego .carrito-container__select-cont .carrito-container__select{
+    height: 2.6rem;
+    margin-right: 2rem;
+}
+
+.carrito-container__resumen {
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    height: fit-content;
+    display: table;
+    flex-direction: column;
+}
+
+.carrito-container__resumen .carrito-container__resumen-dato{
+    background-color: #2568AC;
+    padding: .8rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+div.carrito-container__btn-container{
+    text-align: center;
+}
+
+.carrito-container .carrito-container__resumen .carrito-container__btn{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    padding: 1rem 3rem;
+    align-self: center;
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg-color);
+}
+
+.carrito-container .carrito-container__resumen .carrito-container__btn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.carrito-container .carrito-container__resumen{
+    background-image: var(--secodary-bg-color);
+}
+div.header-cart__nav{
+    width: 20rem;
+}
+div.header-cart__nav img{
+    width: 100%;
+}

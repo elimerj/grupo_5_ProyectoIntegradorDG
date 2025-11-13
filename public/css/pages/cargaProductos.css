@@ -1,0 +1,300 @@
+.container-productLoader {
+    font-size: 18px;
+    margin: 6rem auto;
+}
+
+div.errors {
+    color: red;
+}
+
+form.productLoader-form {
+    padding: 7rem 0;
+}
+
+form div.productLoader-form-1 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+form div.productLoader-form-2 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+form div.productLoader-form-3 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+form div.productLoader-form-4 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+    margin-bottom: 10rem;
+}
+
+form div.productLoader-form-5 {
+    padding: 1rem;
+    background-color: #2D4681;
+    border-radius: var(--button-border-radius);
+    box-shadow: 0 0 10px 3px #010212;
+}
+
+form.productLoader-form h1 {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+    margin-left: 1rem;
+    font-size: 42px;
+}
+
+label.productLoader-form-label {
+    display: block;
+    font-size: 1.6em;
+    margin-left: 1rem;
+    width: 90%;
+}
+
+label.productLoader-form-label-img {
+    display: block;
+    font-size: 1.6em;
+    margin-left: 1rem;
+    width: 90%;
+
+}
+
+input.productLoader-form-input-imgInput {
+    display: none;
+    padding: 1rem 1.5rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    color: white;
+    width: 90%;
+    height: 35%;
+}
+
+input.productLoader-form-checkbox {
+    display: inline-block;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1rem;
+}
+
+label.productLoader-checkbox-label {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+button.productLoader-form-button--submit {
+    background-color: white;
+    font-size: 1.6em;
+    color: white;
+    border-radius: var(--button-border-radius);
+    background-color: #00A6FF;
+    border: none;
+    padding: 1rem 5rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+button.productLoader-form-button--next {
+    position: relative;
+    background-color: white;
+    font-size: 1.6em;
+    background-color: #2568AC;
+    color: white;
+    border-radius: var(--button-border-radius);
+    border: none;
+    padding: 1rem 5rem;
+    margin: auto;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease-in;
+    transition: .4s;
+}
+
+button.productLoader-form-button--next a {
+    text-decoration: none;
+    color: white;
+}
+  
+button.productLoader-form-button--next:before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    transition: .2s ease-in;
+  }
+  
+button.productLoader-form-button--next:hover:before {
+    height: 100%;
+}
+
+input.productLoader-form-input {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    padding: 2rem;
+    color: white;
+    width: 90%;
+    height: 35%;
+    font-size: 20px;
+}
+
+input.productLoader-form-input-video {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    padding: 2rem;
+    color: white;
+    width: 90%;
+    height: 35%;
+    font-size: 20px;
+}
+
+textarea.productLoader-form-input__textarea {
+    display: block;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    color: white;
+    padding-left: 1rem;
+    width: 90%;
+    font-size: 20px;
+}
+
+textarea.productLoader-form-input__bigTextarea {
+    display: block;
+    margin-left: 1rem;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    color: white;
+    width: 95%;
+    font-size: 20px;
+}
+
+select.productLoader-form-input {
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: solid 1.5px white;
+    background-color: #314981;
+    padding: 0 15px;
+    border: solid 1.5px white;
+    color: white;
+    width: 90%;
+    height: 35%;
+}
+
+div.form2-containerLoader-all {
+    margin-left: 3rem;
+}
+
+div.form2-containerLoader {
+    margin: 0 5rem;
+}
+
+div.form2-containerLoader--portray {
+    margin: 1rem 0;
+}
+
+div.form2-containerLoader--video {
+    margin: 1rem;
+}
+
+div.form2-containerLoader--photo__left {
+    margin: 1rem 0;
+}
+
+div.form2-containerLoader--photo__right {
+    margin: 1rem 0;
+}
+
+img.productLoader-form-uploadImage--portray {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    cursor: pointer;
+}
+
+img.productLoader-form-uploadImage--video {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    width: 86%;
+    margin-left: 6.7rem;
+    cursor: pointer;
+}
+
+input.productLoader-form-uploadImage--video-input {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    top: 10rem;
+}
+
+img.productLoader-form-uploadImage {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    margin: 1rem 0;
+    width: 18%;
+    cursor: pointer;
+}
+
+img.productLoader-form-uploadImage--detail {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    margin: 1rem 1rem 0 3.5rem;
+    width: 75%;
+    cursor: pointer;
+}
+
+img.productLoader-form-uploadImage--horizontal {
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px #010212;
+    margin-top: 2rem;
+    right: 0;
+    width: 80%;
+    margin-left: 9rem;
+    cursor: pointer;
+}
+
+.form2-containerEdit--link-video2{
+    position: absolute;
+    z-index: 10;
+    bottom: 8rem;
+    left: 8rem;
+    margin-left: 9rem !important;
+    height: 18vh;
+    width: 60%;
+}
+
+.productEdit-form-input--link-video2::placeholder{
+    color: white !important;
+}

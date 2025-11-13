@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'Detalle de producto'}) %>
+<body>
+    <%- include('partials/header') %>
+    <div class="detalle-container-super-principal container mt-3 padding-cont-detalle">
+        <div class="detalle-container">
+            <div class="detalle-container__mediaInfo">
+                <div class="detalle-container__part-1 arrow">
+                    <%   let i = 0 %>
+                  <%   while(productDetail.images[i].location != "imagen_horizontal"){ %>
+                         <% i++ %>
+                    <% } %>
+                    <div class="vista " ><img class="oculto" src="../../img/uploads/productsImage/<%= productDetail.images[i].img_url %>" alt="imagen-gameplay" id="current">
+                    <iframe class="detalle-container__video" name="videos" src="https://www.youtube.com/embed/<%=productDetail.video%>"  frameborder="0"></iframe>
+                    </div> 
+                    <div class="detalle-container__contenedor-slider">
+                        <button role="button" id="flecha-derecha" class="flecha-izquierda">
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                        <div class="contenedor-carrusel">
+                            <div class="imagen-gameplay principal">
+                                <%  i = 0 %>
+                                <%   while(productDetail.images[i].location != "imagen_detalle"){ %>
+                                    <% i++ %>
+                                <% } %>
+                                <img class="videoPreview" src=" ../../img/uploads/productsImage/<%=productDetail.images[i].img_url %>" alt="imagen-gameplay">
+                                <img class="logo videoPreview" src="../../img/Logos/playvideo.png" alt="logo">
+                            </div>
+                            <% for(let i = 0; i < productDetail.images.length; i++) { %>
+                                <% if(productDetail.images[i].location == "carousel") {%>
+                                    <div class="imagen-gameplay"><img src=" ../../img/uploads/productsImage/<%= productDetail.images[i].img_url %>" alt="imagen-gameplay"></div>
+                            <% } %>
+                            <% } %>
+                        </div>
+                        <button role="button" id="flecha-izquierda" class="flecha-derecha"> 
+                            <i class="fas fa-angle-left"></i>
+                        </button>
+                    </div>
+                </div>
+                <article class="detalle-container__part-2">
+                       <div class="">
+                        <% for(let i = 0; i < productDetail.images.length; i++) { %>
+                            <%  if( productDetail.images[i].location == "imagen_detalle" ){ %>
+                                <img class="imagen-detalle" src="../../img/uploads/productsImage/<%= productDetail.images[i].img_url %>" alt="imagen-horizontal">
+                            <% } %>
+                        <% } %>
+                       </div>
+                       <h3><%= productDetail.description %></h3>
+                       <div class="detalle-container__rating"><i class="fas fa-star mb-2 rating"></i> <%= productDetail.rating %></div>
+                       <p><%= productDetail.price %>$</p>
+                       <div class="botones-administrador">
+                          <%    if(locals.localUser != undefined){%>
+                            <%    if(locals.localUser.privilegios){%>
+                                <button class="detail--action-button"><a href="/product/edit/<%= productDetail.id %>">EDITAR PRODUCTO</a></button>
+                                <form action="/product/detail/<%= productDetail.id %>?_method=delete" method="POST" style="display: inline-flex">
+                                <button type="submit" class="detail--action-button eliminar-juego">ELIMINAR</button>
+                                <%   }%>
+                         <%  }%>
+                        
+                        </form>
+                       </div>
+                       <div class="detalle-container__plataform-buyButtons">
+                            <div class="detalle-container__plataform-buttons">
+                                <% for(let i = 0; i < productDetail.platforms.length; i++){ %>
+                                    <i class="<%= productDetail.platforms[i].icono%>"></i>
+                                <% } %>
+                         
+                        </div>
+                            <div class="">
+                                <a href="/user/cart" class="carrito-contenedor-link"><i class="fas fa-shopping-cart shoping-cart-detalle" aria-hidden="true"></i></a>
+                                <a href="/user/buyForm" class="btn btn-primary btn-lg">Comprar</a>
+                            </div>
+                        </div>
+                </article>
+            </div>
+            <div class="detalle-container__data-description">
+                    <span class="span-detail">Sobre el juego</span>
+                    <div class="detalle-container__full-info">
+                        <div class="detalle-container__devInfo">
+                            <div class="">
+                                <span class="span-detail informacion">Desarrolladora:</span>
+                                <p><%= productDetail.editor %></p>
+                            </div>
+                            <div class="">
+                                <span class="span-detail informacion">Editora:</span>
+                                <p> <%= productDetail.developer %></p>
+                            </div>
+                            <div class="">
+                                <span class="span-detail informacion">Fecha de lanzamiento:</span>
+                                <p> <%= productDetail.launch_date.getFullYear() %></p>
+                            </div>
+                            <div class="">
+                                <span class="span-detail informacion">Etiquetas:</span>
+                                <div class="generos-button">
+                                <% for(let i = 0; i < productDetail.genres.length; i++){ %>
+                                    <button class="detail--action-button generos-button"><a href="/product/genres/<%= productDetail.genres[i].id %>"><%= productDetail.genres[i].name %> </a></button>
+                                <% } %>
+                            </div>
+                            </div>
+                            <div class="">
+                                <span class="span-detail informacion">Clasificacion:</span>
+                                <p> <%= productDetail.classification %></p>
+                            </div>
+                        </div>
+                        <section class="">
+                            <div class="texto-container">
+                                <h1 class="h1-detalle"><%= productDetail.title %></h1>
+                                <div class="texto-informativo">
+                                    <%= productDetail.descriptionBig %>
+                                </div>
+                                <br>
+                                <div class="texto-informativo">
+                                    <%= productDetail.descriptionMedium %>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+            <div class="detalle-container__more-games">
+                <span class="span-detail">Otros juegos</span>
+                <div class="otros-juegos">
+                    <% let arraynumrandom = [] %>
+                    <% let verificador = 0 %>
+                    <% while(arraynumrandom.length < 6) { %>
+                    <% let random = Math.floor(Math.random() * products.length) %>
+                    <%  if ((arraynumrandom.length == 0) && (random != productDetail.id - 1)) { %>
+                    <%  arraynumrandom.push(random) %>
+                    <article class="juegos-container__redirection juegos-container__redirection--modifer">
+                        <article class="juegos-container__product">
+                                <div class="juegos-container__animation">
+                                    <div class="card__side juegos-container__img-cont">
+                                        <% for(let j = 0; j < products[random].images.length; j++) { %>
+                                            <%  if( products[random].images[j].location == "default" ){ %>
+                                            <img class="juegos-container__img" src="../../img/uploads/productsImage/<%= products[random].images[j].img_url %>" alt="">
+                                            <% } %>
+                                        <% } %>
+                                    </div>
+                                    <div class="card__side juegos-container__back-part"
+                                    
+                                    <% for(let j = 0; j < products[random].images.length; j++) { %>
+                                        <%  if( products[random].images[j].location == "default" ){ %>
+                                            style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../img/uploads/productsImage/<%= products[random].images[j].img_url %>');
+                                                   background-size: cover;
+                                                   background-position: center center;
+                                                   "
+                                        <% } %>
+                                    <% } %>
+
+                                    >
+                                        <div class="juegos-container__back-part--part1">
+                                            <p class="juegos-container__back-part--part1-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem suscipit, reiciendis dolor, assumenda ea architecto iste enim aliquid, velit quam voluptatem quia natus facilis ullam?</p>
+                                            <a class="juegos-container__back-part--part1-a" href="/product/detail/<%= products[random].id %>">ver mas</a>
+                                        </div>
+                                        <form  class="" action="/user/cart/<%= products[random].id %>?_method=post" method="POST">
+                                            <button class="juegos-container__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                        </form>
+                                        <a class="juegos-container__buy-button" href="/user/buyFormChoose">BUY</a>
+                                    </div>
+                                </div>
+                            <p class="juegos-container__product-name"><%= products[random].title %><br><%= products[random].price %>$</p>
+                        </article>
+                    </article>
+                    <%  }else{ %>
+                    <% for(let i = 0; i < arraynumrandom.length; i++) { %>
+                    <%  if(random != arraynumrandom[i]){  %>
+                    <%  verificador++ %>
+                    <% } %>
+        
+                    <%  } %>
+                    <%  if((verificador == arraynumrandom.length) && (random != productDetail.id - 1) ){  %>
+                    <%  arraynumrandom.push(random) %>
+                    <article class="juegos-container__redirection juegos-container__redirection--modifer">
+                        <article class="juegos-container__product">
+                                <div class="juegos-container__animation">
+                                    <div class="card__side juegos-container__img-cont">
+                                        <% for(let j = 0; j < products[random].images.length; j++) { %>
+                                            <%  if( products[random].images[j].location == "default" ){ %>
+                                            <img class="juegos-container__img" src="../../img/uploads/productsImage/<%= products[random].images[j].img_url %>" alt="">
+                                            <% } %>
+                                        <% } %>
+                                    </div>
+                                    <div class="card__side juegos-container__back-part"
+                                    
+                                    <% for(let j = 0; j < products[random].images.length; j++) { %>
+                                        <%  if( products[random].images[j].location == "default" ){ %>
+                                            style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../img/uploads/productsImage/<%= products[random].images[j].img_url %>');
+                                                   background-size: cover;
+                                                   "
+                                        <% } %>
+                                    <% } %>
+
+                                    >
+                                        <div class="juegos-container__back-part--part1">
+                                            <p class="juegos-container__back-part--part1-p"><%= products[random].description %></p>
+                                            <a class="juegos-container__back-part--part1-a" href="/product/detail/<%= products[random].id %>">ver mas</a>
+                                        </div>
+                                        <form  class="" action="/user/cart/<%= products[random].id %>?_method=post" method="POST">
+                                            <button class="juegos-container__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                        </form>
+                                        <a class="juegos-container__buy-button" href="/user/buyFormChoose">BUY</a>
+                                    </div>
+                                </div>
+                            <p class="juegos-container__product-name"><%= products[random].title %><br><%= products[random].price %>$</p>
+                        </article>
+                    </article>
+                    <% } %>
+                    <% } %>
+                    <%  verificador = 0 %>
+                    <% } %>       
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    <%- include('partials/scripts') %>
+    <script src="/scripts/detalleProducto.js"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>

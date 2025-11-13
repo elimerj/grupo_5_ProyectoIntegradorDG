@@ -1,0 +1,103 @@
+.container-userEdit{
+    font-size: 1.4rem;
+    background-image: linear-gradient(to bottom, #223052, #191E29);
+    margin: 6rem auto;
+    width: 800px;
+    align-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px #010212;
+}
+
+form.userEdit-form {
+    align-self: center;
+    margin: 0 2rem;
+    padding: 5rem 2rem 4rem 4rem;
+}
+
+form.userEdit-form h1 {
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 40px;
+}
+
+form.userEdit-form h2 {
+    text-align: right;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    font-size: 32px;
+    background-color: #2568AC;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+div.userEdit-form-img-container {
+    text-align: center;
+}
+
+.profile-avatar-img-edit {
+    border-radius: 20rem;
+    width: 200px;
+    cursor: pointer;
+}
+
+
+label.userEdit-form-label {
+    display: block;
+    font-size: 1.6em;
+    margin: 10px 0;
+  }
+
+input.userEdit-form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 10px;
+  }
+
+select.userEdit-form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    padding: 0 10px;
+  }
+
+.userEdit-form-button {
+    position: relative;
+    font-size: 1.6em;
+    background-color: #2568AC;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin: 1.5rem 1rem;
+    padding: 1rem 5rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease-in;
+    transition: .4s;
+}
+
+.userEdit-form-button:before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    transition: .2s ease-in;
+
+}
+
+.userEdit-form-button:hover:before {
+    height: 100%;
+}

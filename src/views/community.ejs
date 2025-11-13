@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'Comunidad'}) %>
+
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container-community">
+        <h1 id="community-top">Conversaciones de la comunidad</h1>
+
+        <div class="community-conversations">
+
+            <% questions.forEach(element => { %>
+
+                <div class="community-single-conversation">
+                    <div class="community-question">
+                        <p><img src="/img/uploads/avatars/<%= element.users.avatar %>" alt=""> <%= element.users.first_name %> <%= element.users.last_name %> <span>Responder</span></p>
+                        <h2><%= element.message %></h2>
+                        <h3><%= element.createdAt %></h3>
+                    </div>
+
+                    <% replies.forEach(subElement => { %>
+
+                        <% if(subElement.id_question == element.id) { %>
+
+                            <div class="community-answer">
+                                <p><img src="/img/uploads/avatars/<%= subElement.users.avatar %>" alt=""> <%= subElement.users.first_name %> <%= subElement.users.last_name %></p>
+                                <h3><%= subElement.message %></h3>
+                                <h4><%= element.createdAt %></h4>
+                            </div>
+
+                        <% } %>
+
+                    <% }) %>
+                </div>
+
+            <% }) %>
+        </div>
+
+        <a href="#community-top"><button type="button" class="community-button"> Volver arriba</button></a>
+  
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    <%- include('partials/scripts') %>
+    <script src="/scripts/community.js"></script>
+</body>
+
+</html>

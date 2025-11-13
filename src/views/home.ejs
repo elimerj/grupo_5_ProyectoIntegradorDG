@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title: 'Inicio'}) %>
+
+<body>
+
+    <!-- Header (Navs) -->
+    <%- include('partials/header') %>
+
+    <div class="container-fluid pb-0 pl-5 pr-5 pt-5">
+        <!-- Slider -->
+
+    <%- include('partials/slider') %>
+
+    
+
+        <div class="container-ofertas">
+            <div class="product-section-1">
+                <!-- Products View Left -->
+            <div class="product-section__portrays">
+                    <div class="product-section__box">
+                        <% let primerDescuento =  Math.floor(Math.random() * discounts.length) %> 
+                        <article>
+                            <% for(let k = 0; k < discounts[primerDescuento].games.images.length; k++) { %>
+                                <%  if( discounts[primerDescuento].games.images[k].location == "default" ){ %>
+                                            <img src="../../img/uploads/productsImage/<%= discounts[primerDescuento].games.images[k].img_url %>" alt="imagen/miniatura">
+                                            <div class="product-section__data">
+                                                <p class="product-section__description"><%= discounts[primerDescuento].games.description %></p>
+                                                <p class="product-section__price">$<%= ((discounts[primerDescuento].games.price - (discounts[primerDescuento].percentage_discount * discounts[primerDescuento].games.price) / 100)).toFixed(2) %></p>
+                                                <a class="product-section__more-info" href="/product/detail/<%=discounts[primerDescuento].games.id %>">ver mas</a>
+                                                <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                    <input name="juego" class="boton-imagen" value="<%=discounts[primerDescuento].games.id %>">
+                                                    <button class="product-section__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                </form>
+                                                <a class="product-section__buy-button" href="/user/buyForm/<%=discounts[primerDescuento].games.id %>">BUY</a>
+                                            </div>
+                                <% } %>
+                            <% } %>
+                        </article>
+                        <div class="cartel-oferta">
+                            <p> <%=discounts[primerDescuento].percentage_discount%>% OFF<p>
+                        </div>
+                    </div>
+                
+            <div class="product-section__horizontal-boxes">
+                <div class="product-section__horizontal-boxes">
+                    
+                    <% let segundoDescuento =  Math.floor(Math.random() * discounts.length) %> 
+                    <% while(segundoDescuento == primerDescuento){ %>
+                        <%   segundoDescuento =  Math.floor(Math.random() * discounts.length) %>
+                        <% } %> 
+                                <div class="product-section__box--horizontal">
+                                    <article>
+                                        <% for(let k = 0; k <discounts[segundoDescuento].games.images.length; k++) { %>
+                                            <%  if( discounts[segundoDescuento].games.images[k].location == "imagen_horizontal" ){ %>
+                                                <img src="../../img/uploads/productsImage/<%= discounts[segundoDescuento].games.images[k].img_url %>" alt="imagen/miniatura">
+                                                <div class="product-section-horizontal__data">
+                                                    <p class="product-section-horizontal__description"><%= discounts[segundoDescuento].games.description %></p>
+                                                    <p class="product-section-horizontal__price">$<%= ((discounts[segundoDescuento].games.price - (discounts[primerDescuento].percentage_discount * discounts[segundoDescuento].games.price) / 100)).toFixed(2)%></p>
+                                                    <a class="product-section-horizontal__more-info" href="/product/detail/<%=discounts[segundoDescuento].games.id %>">ver mas</a>
+                                                    <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                        <input name="juego" class="boton-imagen" value="<%=discounts[segundoDescuento].games.id %>">
+                                                        <button class="product-section-horizontal__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                    </form>
+                                                    <a class="product-section-horizontal__buy-button" href="/user/buyForm/<%=discounts[segundoDescuento].games.id %>">BUY</a>
+                                                </div>
+                                            <% } %>
+                                        <% } %>
+                                    </aarticle>
+                                    <div class="cartel-oferta__horizontal">
+                                        <p><%= discounts[segundoDescuento].percentage_discount %>% OFF<p>
+                                    </div>
+                                </div>
+                                <% let tercerDescuento =  Math.floor(Math.random() * discounts.length) %> 
+                                <% while(tercerDescuento == segundoDescuento || tercerDescuento == primerDescuento){ %>
+                                    <%   tercerDescuento =  Math.floor(Math.random() * discounts.length) %>
+                                    <% } %>
+                                <div class="product-section__box--horizontal ">
+                                    <article>
+                                        <% for(let k = 0; k <discounts[tercerDescuento].games.images.length; k++) { %>
+                                            <%  if( discounts[tercerDescuento].games.images[k].location == "imagen_horizontal" ){ %>
+                                                <img src="../../img/uploads/productsImage/<%=discounts[tercerDescuento].games.images[k].img_url %>" alt="imagen/miniatura">
+                                                <div class="product-section-horizontal__data">
+                                                    <p class="product-section-horizontal__description"><%= discounts[tercerDescuento].games.description %></p>
+                                                    <p class="product-section-horizontal__price">$<%= ((discounts[tercerDescuento].games.price - (discounts[primerDescuento].percentage_discount * discounts[tercerDescuento].games.price) / 100)).toFixed(2) %></p>
+                                                    <a class="product-section-horizontal__more-info" href="/product/detail/<%=discounts[tercerDescuento].games.id %>">ver mas</a>
+                                                    <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                        <input name="juego" class="boton-imagen" value="<%=discounts[tercerDescuento].games.id %>">
+                                                        <button class="product-section-horizontal__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                    </form>
+                                                    <a class="product-section-horizontal__buy-button" href="/user/buyForm/<%=discounts[tercerDescuento].games.id %>">BUY</a>
+                                                </div>
+                                            <% } %>
+                                        <% } %>
+                                    </article>
+                                    <div class="cartel-oferta__horizontal">
+                                        <p><%= discounts[tercerDescuento].percentage_discount %>% OFF<p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section-2">
+            <!-- Products View Right -->
+            <div class="product-section-2__portrays">
+                <% for(let i = 0; i < allCategories.length; i++){ %>
+                    <%  if(allCategories[i].name == "Featured" ){ %>
+                            <div class="product-section-2__box product-section-2__box--1">
+                                <article>
+                                    <% for(let k = 0; k < allCategories[i].games[1].images.length; k++) { %>
+                                        <%  if( allCategories[i].games[1].images[k].location == "default" ){ %>
+                                            <img src="../../img/uploads/productsImage/<%= allCategories[i].games[1].images[k].img_url %>" alt="imagen/miniatura">
+                                            <div class="product-section-2__data">
+                                                <p class="product-section-2__description"><%= allCategories[i].games[1].description %></p>
+                                                <p class="product-section-2__price">$<%= allCategories[i].games[1].price %></p>
+                                                <a class="product-section-2__more-info" href="/product/detail/<%= allCategories[i].games[1].id %>">ver mas</a>
+                                                <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                    <input name="juego" class="boton-imagen" value="<%=allCategories[i].games[1].id%>">
+                                                    <button class="product-section-2__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                </form>
+                                                <a class="product-section-2__buy-button" href="/user/buyForm/<%=allCategories[i].games[1].id%>">BUY</a>
+                                            </div>
+                                     <% } %>
+                                    <% } %>
+                                </article>
+                            </div>
+                            <div class="product-section-2__box product-section-2__box--2">
+                                <article>
+                                    <% for(let k = 0; k < allCategories[i].games[2].images.length; k++) { %>
+                                        <%  if( allCategories[i].games[2].images[k].location == "default" ){ %>
+                                            <img src="../../img/uploads/productsImage/<%= allCategories[i].games[2].images[k].img_url %>" alt="imagen/miniatura">
+                                            <div class="product-section-2__data">
+                                                <p class="product-section-2__description"><%= allCategories[i].games[2].description %></p>
+                                                <p class="product-section-2__price">$<%= allCategories[i].games[2].price %></p>
+                                                <a class="product-section-2__more-info" href="/product/detail/<%= allCategories[i].games[2].id %>">ver mas</a>
+                                                <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                    <input name="juego" class="boton-imagen" value="<%=allCategories[i].games[2].id%>">
+                                                    <button class="product-section-2__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                </form>
+                                                <a class="product-section-2__buy-button" href="/user/buyForm/<%=allCategories[i].games[2].id%>">BUY</a>
+                                            </div>
+                                     <% } %>
+                                    <% } %>
+                                </article>
+                            </div>
+                            <div class="product-section-2__box product-section-2__box--3">
+                                <article>
+                                    <% for(let k = 0; k < allCategories[i].games[3].images.length; k++) { %>
+                                        <%  if( allCategories[i].games[3].images[k].location == "default" ){ %>
+                                            <img src="../../img/uploads/productsImage/<%= allCategories[i].games[3].images[k].img_url %>" alt="imagen/miniatura">
+                                            <div class="product-section-2__data">
+                                                <p class="product-section-2__description"><%= allCategories[i].games[3].description %></p>
+                                                <p class="product-section-2__price">$<%= allCategories[i].games[3].price %></p>
+                                                <a class="product-section-2__more-info" href="/product/detail/<%= allCategories[i].games[3].id %>">ver mas</a>
+                                                <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                    <input name="juego" class="boton-imagen" value="<%=allCategories[i].games[3].id%>">
+                                                    <button class="product-section-2__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                </form>
+                                                <a class="product-section-2__buy-button" href="/user/buyForm/<%=allCategories[i].games[3].id%>">BUY</a>
+                                            </div>
+                                     <% } %>
+                                    <% } %>
+                                </article>
+                            </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+
+    </div>     
+
+
+
+        <div class="juegos-container">
+
+            <%- include('partials/aside') %>
+
+            <section class="juegos-container__all-products">
+                <h2 class="juegos-container__title">Recientes</h2>
+                
+                <div class="juegos-container__products-container">
+                    <% for(let i = 0; i < allCategories.length; i++) { %>
+                        <%  if(allCategories[i].name == "News" ){ %>
+                            <% for(let j = 0; j < allCategories[i].games.length; j++) { %>
+                                <article class="juegos-container__redirection">
+                                    <article class="juegos-container__product">
+                                            <div class="juegos-container__animation">
+                                                <div class="card__side juegos-container__img-cont">
+                                                    <% for(let k = 0; k < allCategories[i].games[j].images.length; k++) { %>
+                                                        <%  if( allCategories[i].games[j].images[k].location == "default" ){ %>
+                                                        <img class="juegos-container__img" src="../../img/uploads/productsImage/<%=allCategories[i].games[j].images[k].img_url%>" alt="">
+                                                        <% } %>
+                                                    <% } %>
+                                                </div>
+                                                <div class="card__side juegos-container__back-part" 
+
+                                                <% for(let k = 0; k < allCategories[i].games[j].images.length; k++) { %>
+                                                    <%  if( allCategories[i].games[j].images[k].location == "default" ){ %>
+                                                        style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../img/uploads/productsImage/<%= allCategories[i].games[j].images[k].img_url %>');
+                                                               background-size: cover;
+                                                               background-position: center center;
+                                                               "
+                                                    <% } %>
+                                                <% } %>
+
+                                                >
+                                                    <div class="juegos-container__back-part--part1">
+                                                        <p class="juegos-container__back-part--part1-p"><%= allCategories[i].games[j].description %></p>
+                                                        <a class="juegos-container__back-part--part1-a" href="/product/detail/<%= allCategories[i].games[j].id %>">ver mas</a>
+                                                    </div>
+                                                    <form  class="" action="/user/cart/<%=locals.localUser!= undefined ? locals.localUser.id: '0'%>?_method=post" method="POST">
+                                                        <input name="juego" class="boton-imagen" value="<%=allCategories[i].games[j].id%>">
+                                                        <button class="juegos-container__shopping-cart" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                                    </form>
+                                                    <a class="juegos-container__buy-button" href="/user/buyForm/<%=allCategories[i].games[j].id%>">BUY</a>
+                                                </div>
+                                            </div>
+                                        <p class="juegos-container__product-name"><%= allCategories[i].games[j].title %><br><%= allCategories[i].games[j].price %>$</p>
+                                    </article>
+                                </article>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+                </div>        
+            </section>
+        </div>
+    </div>
+    
+
+    <!-- Products -->
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    
+    <%- include('partials/scripts') %>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js'></script>
+			<script src='https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.18/chance.min.js'></script>
+			<script src='https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js'></script>
+</body>
+
+</html>

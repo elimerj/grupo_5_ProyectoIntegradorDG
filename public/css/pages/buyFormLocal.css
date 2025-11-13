@@ -1,0 +1,108 @@
+.container-buyLocal{
+    min-height: 65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-buyLocal2{
+    width: 110rem;
+    height: 75rem;
+    justify-content: space-between;
+    display: flex;
+    background-color: #2D4681;
+    box-shadow: 0 0 10px 3px #010212;
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 10rem 0;
+}
+
+.buyLocal__left-section{
+    display: flex;
+}
+
+.buyLocal__info-part1{
+    margin-right: 5rem;
+}
+
+.buyLocal__title-cont{
+    margin-bottom: 2rem;
+}
+
+.buyLocal__line{
+    height: .2rem;
+    width: 100%;
+    background-color: darkblue;
+}
+
+.buyLocal__single-info {
+    margin: 2rem 0;
+}
+
+.buyLocal__single-info h2 {
+    font-size: 24px;
+}
+
+.buyLocal__single-info h4 {
+    font-size: 16px;
+}
+
+.buyLocal__info-part2 {
+    margin-top: 10rem;
+    margin-left: 1rem;
+}
+
+.buyLocal__icon{
+    margin-left: 1.7rem;
+}
+
+.buyLocal__right-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    margin-right: 5rem;
+}
+
+.buyLocal__continue-btn{
+    margin-top: auto;
+}
+
+
+.buyLocal__continue-btn button {
+    position: relative;
+    background-color: white;
+    font-size: 1.6em;
+    background-color: #2568AC;
+    color: white;
+    border-radius: var(--button-border-radius);
+    border: none;
+    padding: 1rem 5rem;
+    margin-top: 20rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease-in;
+    transition: .4s;
+}
+
+.buyLocal__continue-btn button {
+    text-decoration: none;
+    color: white;
+}
+  
+.buyLocal__continue-btn button:before {
+    content: "";
+    position: absolute;
+    background-color: var(--button-bg-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    transition: .2s ease-in;
+  }
+  
+.buyLocal__continue-btn button:hover:before {
+    height: 100%;
+}
